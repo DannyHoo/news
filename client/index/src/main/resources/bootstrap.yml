@@ -1,0 +1,15 @@
+server:
+  port: 8700
+
+spring:
+  application:
+    name: news-client-index  #和SpringCloudConig的配置文件前缀一样
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8710/
+      label: master
+      profile: dev
+
+

@@ -1,0 +1,22 @@
+server:
+  port: 8700
+
+spring:
+  application:
+    name: news-register  #和SpringCloudConig的配置文件前缀一样
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8710/
+      label: master
+      profile: dev
+
+management: #actuator 相关，用于自动刷新配置
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,14 @@
+server:
+  port: 8720
+
+spring:
+  application:
+    name: news-gateway
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8710/
+      label: master
+      profile: dev
+
