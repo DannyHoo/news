@@ -1,4 +1,4 @@
-package com.danny.news.client.article;
+package com.danny.news.client.comment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,14 +7,15 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 /**
  * @author huyuyang
  * @email yuyang.hu@opay-inc.com
- * @date 2019/11/17下午10:37
+ * @date 2019/11/19下午6:32
  */
 @SpringBootApplication
 @EnableEurekaClient
-public class ArticleApplication {
+public class CommentApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ArticleApplication.class, args);
+        SpringApplication.run(CommentApplication.class, args);
     }
+
 
 }

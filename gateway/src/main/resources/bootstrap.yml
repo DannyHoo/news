@@ -1,5 +1,5 @@
 server:
-  port: 8720
+  port: 8200
 
 spring:
   application:
@@ -8,7 +8,8 @@ spring:
     active: dev
   cloud:
     config:
-      uri: http://localhost:8710/
+      uri: http://localhost:8000/
       label: master
       profile: dev
+      name: ${spring.application.name},common
 

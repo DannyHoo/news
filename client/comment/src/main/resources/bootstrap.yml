@@ -1,9 +1,9 @@
 server:
-  port: 8100
+  port: 8320
 
 spring:
   application:
-    name: news-register  #和SpringCloudConig的配置文件前缀一样
+    name: news-client-comment  #和SpringCloudConig的配置文件前缀一样
   profiles:
     active: dev
   cloud:
@@ -11,4 +11,3 @@ spring:
       uri: http://localhost:8000/
       label: master
       profile: dev
-      name: ${spring.application.name}

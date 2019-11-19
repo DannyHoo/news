@@ -1,9 +1,12 @@
 server:
-  port: 8710
+  port: 8000
 
 spring:
   application:
     name: news-config
+
+  #profiles:
+    #active: native #ConfigServer默认从应用的src/main/resources下检索配置文件
 
   cloud:
     config:
@@ -14,6 +17,8 @@ spring:
           username: DannyHoo6688
           password: G4MBhcIRxsTiELKv
           basedir: /data/springcloudconfig
+        #native:
+          #search-locations: file:/data/config/ #ConfigServer默认从指定目录下检索配置文件
       label: master
 
 
