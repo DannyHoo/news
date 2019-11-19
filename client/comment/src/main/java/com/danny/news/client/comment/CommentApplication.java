@@ -17,5 +17,4 @@ public class CommentApplication {
         SpringApplication.run(CommentApplication.class, args);
     }
 
-
 }
