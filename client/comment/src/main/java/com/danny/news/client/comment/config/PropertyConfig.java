@@ -25,5 +25,6 @@ public class PropertyConfig {
         log.info("loadding properties:");
         log.info("project.property.property1:" + project_property_property1);
         log.info("common.property.property1:" + common_property_property1);
+        log.info("");
     }
 }
