@@ -11,3 +11,4 @@ spring:
       uri: http://localhost:8000/
       label: master
       profile: dev
+      name: ${spring.application.name},common
