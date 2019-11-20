@@ -15,7 +15,7 @@ spring:
           uri: https://github.com/DannyHoo6688/SpringCloudConfig
           searchPaths: repo
           username: DannyHoo6688
-          password: G4MBhcIRxsTiELKv
+          password: news6688
           basedir: /data/springcloudconfig
         #native:
           #search-locations: file:/data/config/ #ConfigServer默认从指定目录下检索配置文件
