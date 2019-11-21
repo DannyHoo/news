@@ -21,6 +21,12 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.danny.news</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- Eureka客户端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

@@ -1,8 +1,10 @@
 package com.danny.news.client.index.config;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import com.danny.news.common.redis.Redis;
 
 import javax.annotation.PostConstruct;
 
@@ -20,10 +22,15 @@ public class PropertyConfig {
     @Value("${common.property.property1}")
     private String common_property_property1;
 
+    @Autowired
+    private Redis redis;
+
     @PostConstruct
     public void init() {
         log.info("loadding properties:");
         log.info("project.property.property1:" + project_property_property1);
         log.info("common.property.property1:" + common_property_property1);
+
+        log.info("entity64061:"+redis.get("entity64061"));
     }
 }
