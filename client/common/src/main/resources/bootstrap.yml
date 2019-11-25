@@ -1,9 +1,9 @@
 server:
-  port: 8340
+  port: 8400
 
 spring:
   application:
-    name: news-client-user  #和SpringCloudConig的配置文件前缀一样
+    name: news-client-common
   profiles:
     active: dev
   cloud:
@@ -12,4 +12,8 @@ spring:
       label: master
       profile: dev
       name: ${spring.application.name},common,redis,database
+
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
 

@@ -1,4 +1,4 @@
-package com.danny.news.common.redis;
+package com.danny.news.client.common.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.util.concurrent.TimeUnit;
 
 @Component
-public class Redis {
+public class RedisUtils {
 
     @Autowired
     private StringRedisTemplate template;

@@ -1,0 +1,6 @@
+
+
+config:
+  opay:
+    host:
+      common: localhost:8400/

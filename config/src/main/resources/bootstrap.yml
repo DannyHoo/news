@@ -20,12 +20,3 @@ spring:
         #native:
           #search-locations: file:/data/config/ #ConfigServer默认从指定目录下检索配置文件
       label: master
-
-
-#eureka:
-#  instance:
-#    hostname: ${spring.cloud.client.ip-address}
-#    instanceId: ${spring.cloud.client.ip-address}:${server.port}
-#  client:
-#    serviceUrl:
-#      defaultZone: http://localhost:8700/eureka/

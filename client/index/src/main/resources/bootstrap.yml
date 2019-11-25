@@ -8,7 +8,7 @@ spring:
     active: dev
   cloud:
     config:
-      uri: http://localhost:8000/
+      uri: http://140.143.158.164:8000/
       label: master
       profile: dev
       name: ${spring.application.name},common,database,redis
