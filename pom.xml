@@ -10,8 +10,8 @@
         <module>gateway</module>
         <module>client</module>
         <module>common</module>
-        <module>client-mock</module>
         <module>framework</module>
+        <module>mockclient</module>
     </modules>
 
     <parent>

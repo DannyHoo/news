@@ -30,7 +30,7 @@ public class EncryptController {
         return encryptOpenService.getRSA();
     }
 
-    @RequestMapping(value = "getKey", method = RequestMethod.POST)    //@DisabledEncrypt
+    @RequestMapping(value = "getKey", method = RequestMethod.POST, consumes = "application/json") //不加consumes调用端可能报错415
     public Result<KeyResponse> getKey(@Valid @RequestBody KeyRequest request) throws Exception {
         return encryptOpenService.getKey(request);
     }

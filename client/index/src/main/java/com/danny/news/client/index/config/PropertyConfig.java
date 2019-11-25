@@ -1,6 +1,6 @@
 package com.danny.news.client.index.config;
 
-import com.danny.news.client.common.redis.RedisUtils;
+import com.danny.news.framework.redis.RedisUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

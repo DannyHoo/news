@@ -4,8 +4,8 @@ import com.danny.news.client.common.model.KeyRequest;
 import com.danny.news.client.common.model.KeyResponse;
 import com.danny.news.client.common.model.RSAResponse;
 import com.danny.news.client.common.model.Result;
-import com.danny.news.client.common.util.RSAUtils;
 import com.danny.news.client.common.service.EncryptOpenService;
+import com.danny.news.framework.util.RsaTool;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -34,8 +34,10 @@ public class EncryptOpenServiceImpl implements EncryptOpenService {
 
     @Override
     public Result<KeyResponse> getKey(KeyRequest request) throws Exception {
-        String clientPublicKey = RSAUtils.privateDecrypt(request.getClientEncryptPublicKey(), RSAUtils.getPrivateKey(privateKey));
-        String encryptKey = RSAUtils.publicEncrypt(key, RSAUtils.getPublicKey(clientPublicKey));
+        String clientPublicKey= RsaTool.decryptByPrivateKey(request.getClientEncryptPublicKey(),privateKey);
+        String encryptKey=RsaTool.encryptByPublicKey(key,clientPublicKey);
+        //String clientPublicKey = RSAUtils.privateDecrypt(request.getClientEncryptPublicKey(), RSAUtils.getPrivateKey(privateKey));
+        //String encryptKey = RSAUtils.publicEncrypt(key, RSAUtils.getPublicKey(clientPublicKey));
         KeyResponse response = KeyResponse.options()
                 .setKey(encryptKey)
                 .build();
